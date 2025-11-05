@@ -21,42 +21,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function periodSetupEventListeners() {
-    document.getElementById('period-step-1-btn').addEventListener('click', function () {
+    document.getElementById('period-step-1-btn').addEventListener('click', function (e) {
+        e.preventDefault();
         periodShowStep('period-step-2');
     });
 
-    document.getElementById('period-exact-btn').addEventListener('click', function () {
+    document.getElementById('period-exact-btn').addEventListener('click', function (e) {
+        e.preventDefault();
         periodType = 'exact';
         periodShowStep('period-step-3-exact');
     });
 
-    document.getElementById('period-range-btn').addEventListener('click', function () {
+    document.getElementById('period-range-btn').addEventListener('click', function (e) {
+        e.preventDefault();
         periodType = 'range';
         periodShowStep('period-step-3-range');
     });
 
-    document.getElementById('period-prev-month-exact').addEventListener('click', function () {
+    document.getElementById('period-prev-month-exact').addEventListener('click', function (e) {
+        e.preventDefault();
         periodChangeMonth(-1, false);
     });
 
-    document.getElementById('period-next-month-exact').addEventListener('click', function () {
+    document.getElementById('period-next-month-exact').addEventListener('click', function (e) {
+        e.preventDefault();
         periodChangeMonth(1, false);
     });
 
-    document.getElementById('period-prev-month-range').addEventListener('click', function () {
+    document.getElementById('period-prev-month-range').addEventListener('click', function (e) {
+        e.preventDefault();
         periodChangeMonth(-1, true);
     });
 
-    document.getElementById('period-next-month-range').addEventListener('click', function () {
+    document.getElementById('period-next-month-range').addEventListener('click', function (e) {
+        e.preventDefault();
         periodChangeMonth(1, true);
     });
 
-    document.getElementById('period-btn-next-exact').addEventListener('click', function () {
+    document.getElementById('period-btn-next-exact').addEventListener('click', function (e) {
+        e.preventDefault();
         periodShowStep('period-step-4');
         document.querySelector('.period-form').style.cssText = 'overflow: hidden;';
     });
 
-    document.getElementById('period-btn-next-range').addEventListener('click', function () {
+    document.getElementById('period-btn-next-range').addEventListener('click', function (e) {
+        e.preventDefault();
         periodShowStep('period-step-4');
         document.querySelector('.period-form').style.cssText = 'overflow: hidden;';
     });

@@ -14,8 +14,10 @@
 <body>
     <form class="period-form" action='#'>
         <fieldset class="period-form__step period-form__step--active" id="period-step-1">
-            <h2 class="period-form__title">Хотите просто узнать стоимость и свободна ли ваша дата, но нет времени на
-                разговоры?</h2>
+            <legend>
+                <h2 class="period-form__title">Хотите просто узнать стоимость и свободна ли ваша дата, но нет времени на
+                    разговоры?</h2>
+            </legend>
             <button class="period-form__btn" id="period-step-1-btn">Узнать за 1 минуту</button>
             <div class="period-form__tiger-block">
                 <div class="period-form__tiger-text">Просто напишите вашу дату и все!</div>
@@ -26,7 +28,9 @@
         </fieldset>
 
         <fieldset class="period-form__step" id="period-step-2">
-            <h2>Вы знаете точную дату праздника или диапазон?</h2>
+            <legend>
+                <h2>Вы знаете точную дату праздника или диапазон?</h2>
+            </legend>
             <div class="period-form__btn-group">
                 <button class="period-form__btn" id="period-exact-btn">Знаю точно</button>
                 <button class="period-form__btn" id="period-range-btn">Хочу узнать с ... по ...</button>
@@ -47,8 +51,9 @@
                         <img src="img/tigr-left.png" alt="">
                     </div>
                 </div>
-                <input type="text" class="period-form__date-input" id="period-selected-date-exact" placeholder="Нажмите для выбора даты"
-                    readonly>
+                <label class="period-form__label hidden" for="period-selected-date-exact"></label>
+                <input type="text" class="period-form__date-input" name="period-selected-date-exact" id="period-selected-date-exact"
+                    placeholder="Нажмите для выбора даты" readonly>
 
             </div>
             <div class="period-form__calendar-container" id="period-calendar-container-exact">
@@ -71,7 +76,9 @@
                         <img src="img/tigr-left.png" alt="">
                     </div>
                 </div>
-                <input type="text" class="period-form__date-input" id="period-selected-date-range" placeholder="День и месяц" readonly>
+                <label class="period-form__label hidden" for="period-selected-date-range"></label>
+                <input type="text" class="period-form__date-input" name="period-selected-date-range" id="period-selected-date-range"
+                    placeholder="День и месяц" readonly>
                 <div class="period-form__calendar-container" id="period-calendar-container-range">
                     <div class="period-form__calendar-header">
                         <button id="period-prev-month-range">←</button>
@@ -87,9 +94,12 @@
         </fieldset>
 
         <fieldset class="period-form__step" id="period-step-4">
-            <h2 class="period-form__title">Принял!<br>Я отправлю результаты вам <br> в WhatsApp</h2>
+            <legend>
+                <h2 class="period-form__title">Принял!<br>Я отправлю результаты вам <br> в WhatsApp</h2>
+            </legend>
             <div class="period-form__phone-container">
-                <input type="tel" class="period-form__phone-input" id="period-phone" placeholder="Номер телефона">
+                <label class="period-form__label hidden" for="period-phone"></label>
+                <input type="tel" class="period-form__phone-input" id="period-phone" name="period-phone" placeholder="Номер телефона">
             </div>
             <button class="period-form__btn" type='submit' id="period-submit-btn">Отправить</button>
             <div class="period-form__tiger-block">
