@@ -283,7 +283,7 @@ function periodSubmitForm() {
             end: periodDateRange.end ? `${periodDateRange.end.getDate()}.${periodDateRange.end.getMonth() + 1}.${periodDateRange.end.getFullYear()}` : null
         };
     }
-
+~
     console.log('Данные формы:', formData);
 
 
