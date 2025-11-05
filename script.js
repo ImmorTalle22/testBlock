@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const periodPhoneInput = document.getElementById('period-phone');
     window.periodPhoneInputObj = window.intlTelInput(periodPhoneInput, {
         initialCountry: "ru",
+        onlyCountries: ["by", "ru"],
+        countrySearch: false,
         separateDialCode: true,
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
@@ -283,8 +285,8 @@ function periodSubmitForm() {
             end: periodDateRange.end ? `${periodDateRange.end.getDate()}.${periodDateRange.end.getMonth() + 1}.${periodDateRange.end.getFullYear()}` : null
         };
     }
-~
-    console.log('Данные формы:', formData);
+    
+        console.log('Данные формы:', formData);
 
 
     periodResetForm();
