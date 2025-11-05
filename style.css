@@ -1,0 +1,278 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ :root {
+     --font-family: "Open Sans", sans-serif;
+     --second-family: "Nunito", sans-serif;
+ }
+
+ .period-form {
+     margin: 0 auto;
+     position: relative;
+     background: #f5f5f5;
+     background-image: url("img/background.svg");
+     background-repeat: no-repeat;
+     background-position: right top;
+     border-radius: 30px;
+     width: 100%;
+     max-width: 692px;
+     padding: 90px 70px 70px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .period-form__step {
+     display: none;
+     margin-bottom: 76px;
+ }
+
+ .period-form__step--active {
+     display: block;
+ }
+
+ .period-form__title {
+     font-family: var(--second-family);
+     font-weight: 800;
+     font-size: 46px;
+     line-height: 100%;
+     color: #000;
+     margin-bottom: 55px;
+ }
+
+ .period-form__btn {
+     width: fit-content;
+     font-family: var(--font-family);
+     font-weight: 600;
+     font-size: 24px;
+     background: #1b1c1e;
+     color: #fff;
+     border-radius: 65px;
+     padding: 8px 26px;
+     height: 49px;
+     transition: all 0.2s ease-in-out;
+     cursor: pointer;
+ }
+
+ .period-form__btn:hover {
+     transform: scale(1.05);
+ }
+
+ .period-form__btn-group {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-top: 20px;
+ }
+
+ .period-form__btn-group .period-form__btn {
+     margin-top: 0;
+ }
+
+ .period-form__tiger-block {
+     position: absolute;
+     right: -20%;
+     bottom: -17%;
+ }
+
+ .period-form__tiger-text {
+     position: relative;
+     width: 60%;
+     font-family: var(--font-family);
+     font-weight: 600;
+     font-size: 20px;
+     color: #1b1c1e;
+     border-radius: 10px;
+     background: #fff;
+     transform: rotate(-7deg);
+     left: -30px;
+     padding: 20px;
+     border: 2px solid #1b1c1e;
+ }
+
+ .period-form__tiger-text::before {
+     content: '';
+     position: absolute;
+     width: 24px;
+     height: 24px;
+     left: 81%;
+     bottom: -14px;
+     background: #fff;
+     border-right: 2px solid #1b1c1e;
+     border-bottom: 2px solid #1b1c1e;
+     border-radius: 3px;
+     transform: translateX(-50%) rotate(45deg);
+ }
+
+ .period-form__tiger-img {
+     max-width: 230px;
+ }
+
+ .period-form__tiger-img img {
+     width: 100%;
+     height: 100%;
+ }
+
+ .period-form__calendar-container {
+     display: none;
+ }
+
+ .period-form__calendar-container--active {
+     min-width: 346px;
+     width: 50%;
+     display: block;
+     position: absolute;
+     z-index: 999;
+     background: white;
+ }
+
+ .period-form__calendar {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 15px;
+ }
+
+ .period-form__calendar th,
+ .period-form__calendar td {
+     padding: 10px;
+     text-align: center;
+     border-radius: 5px;
+ }
+
+ .period-form__calendar th {
+     font-family: var(--font-family);
+     font-weight: 600;
+     font-size: 15px;
+     color: #1b1c1e;
+ }
+
+ .period-form__calendar td {
+     cursor: pointer;
+     transition: background 0.2s;
+ }
+
+ .period-form__calendar td:hover {
+     background: #f0f4ff;
+ }
+
+ .period-form__calendar td.period-form__date-selected {
+     background: #a983de;
+     color: white;
+ }
+
+ .period-form__calendar td.period-form__date-in-range {
+     background: #e0e8ff;
+     border-radius: 0px;
+ }
+
+ .period-form__calendar-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border: 2px solid #ebebeb;
+     border-radius: 5px;
+     padding: 10px;
+ }
+
+ .period-form__calendar-header button {
+     background: none;
+     border: none;
+     font-size: 18px;
+     cursor: pointer;
+     color: #a983de;
+     padding: 5px 10px;
+     border-radius: 5px;
+     transition: background 0.2s;
+ }
+
+ .period-form__calendar-header button:hover {
+     background: #f0f4ff;
+ }
+
+ .period-form__phone-container {
+     margin: 20px 0;
+ }
+
+ .period-form__phone-input,
+ .period-form__date-input {
+     width: 100%;
+     padding: 14px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ .period-form__phone-input:focus,
+ .period-form__date-input:focus {
+     border-color: #4a6cf7;
+     outline: none;
+     box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+ }
+
+ .period-form__date-container {
+     margin-top: 15px;
+ }
+
+ .period-form__date-container .period-form__tiger-block {
+     position: relative;
+     width: fit-content;
+     margin-bottom: -230px;
+     right: -65%;
+     z-index: 0;
+     top: -6px;
+ }
+
+ .period-form__date-input {
+     min-width: 346px;
+     width: 50%;
+     position: relative;
+     z-index: 1;
+     border: 1.50px solid #ebebeb;
+     border-radius: 5px;
+     height: 50px;
+     background: #fff;
+     margin-bottom: 15px;
+ }
+
+ @media (max-width: 660px) {
+    .period-form__tiger-block {
+        bottom: -25%;
+    }
+
+    .period-form {
+        padding: 40px;
+    }
+
+     .period-form__date-input {
+         font-weight: 600;
+         font-size: 15px;
+     }
+
+     .period-form__title {
+         font-weight: 800;
+         font-size: 22px;
+         line-height: 100%;
+     }
+
+     .period-form__tiger-text {
+         font-weight: 600;
+         font-size: 13px;
+     }
+
+     .period-form__btn {
+         font-size: 20px;
+         font-weight: 600;
+     }
+
+     .period-form__step {
+         margin-bottom: 185px;
+     }
+
+     .period-form__btn-group {
+         margin-bottom: 200px;
+     }
+ }
